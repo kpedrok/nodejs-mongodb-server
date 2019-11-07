@@ -33,3 +33,7 @@ xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px) or xl (>=1200px))
 
 
 ## Toolip -> Popover > Modal
+
+## JQuery 
+- https://www.w3schools.com/jquery/default.asp
+- https://jquery.com/
