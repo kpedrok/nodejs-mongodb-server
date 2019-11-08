@@ -43,3 +43,16 @@ xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px) or xl (>=1200px))
 ## convert Scss
 add to script "scss": "node-sass -o css/ css/"
 npm run scss
+
+
+
+## 
+paralel fix https://stackoverflow.com/questions/53461626/problem-running-parallelshell-nodejs-script
+
+linux formart
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+
+windows format
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
