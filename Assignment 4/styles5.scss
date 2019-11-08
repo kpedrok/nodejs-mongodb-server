@@ -1,0 +1,115 @@
+$lt-gray: #DDD;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+
+// Height variables
+$carousel-item-height: 300px;
+$row-content-height: 400px;
+
+//MIXINS
+@mixin zero-margin ($pad-up-dn, $pad-left-right) {
+    margin: 0px auto;  // deletes vertical margins & center horizontally
+    padding: $pad-up-dn $pad-left-right;
+}
+
+
+/*** BODY ***/
+body {
+    padding-top: 50px; // so the navbar won't cover the body content
+    z-index: 0;
+}
+
+/*** NAVBAR ***/
+.navbar-dark {
+    background: $background-dark;
+}
+ul.navbar-nav li i.fas {
+    margin-right: 5px;
+}
+ul.navbar-nav li a.nav-link {
+    margin-right: 8px;
+}
+@media (max-width: 575px){ /* xs */
+    nav a.navbar-brand {
+        margin: 0 auto 0 15px; // push navbar-brand to the left
+    }
+}
+
+/* Modals */
+.modal-header {
+    background: $background-dark;
+    color: floralwhite;
+
+    button span {
+        color: floralwhite;
+    }
+}
+
+.modal-body, .modal-footer {
+    background: $background-pale;
+}
+
+/*** HEADER ***/
+.row-header {
+    @include zero-margin(0px, 0px);
+}
+
+.jumbotron {
+    @include zero-margin(70px, 30px);
+    background: $background-light;
+    color: floralwhite;
+}
+
+/*** MAIN ***/
+.row-content {
+    @include zero-margin(50px, 0px);
+    border-bottom: 1px ridge;
+    min-height:  $row-content-height;
+}
+
+.hotBadge {
+    margin-right: 8px;
+}
+
+.tab-content { // TAB in contactus.html
+    border-left: 1px solid $lt-gray;
+    border-right: 1px solid $lt-gray;
+    border-bottom: 1px solid $lt-gray;
+    padding: 10px;
+}
+
+/* Carousel */
+.carousel {
+    background: $background-dark;
+
+    .carousel-item {
+        height: $carousel-item-height;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: $carousel-item-height;
+        }
+    }
+}
+
+#carouselButton {
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+}
+
+/*** FOOTER ***/
+body > footer {
+    background-color: $background-pale;
+    @include zero-margin(20px, 0);
+}
+
+.address {
+    font-size: 80%;
+    margin: 0;
+    color: #0f0f0f;   
+}
