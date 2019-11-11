@@ -71,3 +71,17 @@ To this:
 
 cwd: parseInt(process.versions.node) < 8 ? process.cwd : process.cwd(),
 It's done!
+
+
+
+install to use copy npm
+sudo npm -g install copyfiles@2.0.0
+
+sudo npm -g install imagemin-cli@3.0.0
+
+sudo npm install -g imagemin-cli@3.0.0 --unsafe-perm=true --allow-root
+
+
+
+
+npm run build
