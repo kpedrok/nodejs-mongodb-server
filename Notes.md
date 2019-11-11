@@ -56,3 +56,18 @@ linux formart
 windows format
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+
+
+    if keep error
+There is a problem with Parallelshell that has to be fixed manually;
+
+go to the file:
+
+node_modules/parallelshell/index.js
+Then change this line:
+
+cwd: process.versions.node < '8.0.0' ? process.cwd : process.cwd(),
+To this:
+
+cwd: parseInt(process.versions.node) < 8 ? process.cwd : process.cwd(),
+It's done!
