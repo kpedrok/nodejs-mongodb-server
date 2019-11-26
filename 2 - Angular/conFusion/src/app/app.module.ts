@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import 'hammerjs';
 
@@ -15,8 +14,8 @@ import 'hammerjs';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FlexLayoutModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
