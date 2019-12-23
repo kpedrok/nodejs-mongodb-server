@@ -21,3 +21,14 @@ Next, include the following into the <head> of index.html to make use of Materia
 http://www.typescriptlang.org/docs/tutorial.html
 npm install -g typescript
 tsc helloworld.ts
+
+# Angular
+
+ng generate component menu
+- create a menu file and update the app.module.ts
+- Dica: cada componente deve ficar na sua própria pasta
+
+
+
+# Dicas
+- Times devem usar um formatador de código. Asssim, não importa qual o formato do commit, o código será formatado automaticamente. 
