@@ -28,6 +28,10 @@ ng generate component menu
 - create a menu file and update the app.module.ts
 - Dica: cada componente deve ficar na sua própria pasta
 
+## Structural Directives
+ - ngIf
+ - ngFor
+ - ngSwitch
 
 
 # Dicas
