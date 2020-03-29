@@ -3,7 +3,6 @@ import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { AppComponent } from "./app.component";
 import "hammerjs";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatListModule } from "@angular/material/list";
@@ -19,6 +18,9 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatSliderModule } from "@angular/material/slider";
+import { HttpClientModule } from "@angular/common/http";
+
+import { AppComponent } from "./app.component";
 
 import { MenuComponent } from "./menu/menu.component";
 import { DishdetailComponent } from "./dishdetail/dishdetail.component";
@@ -32,6 +34,7 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { PromotionService } from "./services/promotion.service";
 import { LeaderService } from "./services/leader.service";
 import { LoginComponent } from "./login/login.component";
+import { baseURL } from "./shared/baseurl";
 
 @NgModule({
   declarations: [
@@ -64,10 +67,16 @@ import { LoginComponent } from "./login/login.component";
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
-    MatSliderModule
+    MatSliderModule,
+    HttpClientModule
   ],
   entryComponents: [LoginComponent],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [
+    DishService,
+    PromotionService,
+    LeaderService,
+    { provide: "baseURL", useValue: baseURL }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
