@@ -1,12 +1,5 @@
-<div
-  class="container"
-  fxLayout="row wrap"
-  fxLayout.sm="column"
-  fxLayout.xs="column"
-  fxLayoutAlign.gt-md="space-around center"
-  fxLayoutGap="10px"
-  fxLayoutGap.xs="0"
->
+<div class="container" fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px"
+  fxLayoutGap.xs="0">
   <div fxFlex="100">
     <div>
       <h3 *ngIf="dish">{{ dish.name | uppercase }}</h3>
@@ -21,11 +14,7 @@
           <h3 *ngIf="dish">{{ dish.name | uppercase }}</h3>
         </mat-card-title>
       </mat-card-header>
-      <img
-        mat-card-image
-        src="{{ baseURL + dish.image }}"
-        alt="{{ dish.name }}"
-      />
+      <img mat-card-image src="{{ baseURL + dish.image }}" alt="{{ dish.name }}" />
       <mat-card-content>
         <p>{{ dish.description }}</p>
       </mat-card-content>
@@ -60,62 +49,29 @@
     </mat-list>
   </div>
   <div fxFlex fxFlexOffset="20px" class="form-size" *ngIf="dish">
-    <form
-      novalidate
-      [formGroup]="feedbackForm"
-      #fform="ngForm"
-      (ngSubmit)="onSubmit()"
-    >
+    <form novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
       <p>
         <mat-form-field class="half-width">
-          <input
-            matInput
-            formControlName="author"
-            placeholder="Author name"
-            type="text"
-            required
-          />
-          <mat-error
-            *ngIf="
+          <input matInput formControlName="author" placeholder="Author name" type="text" required />
+          <mat-error *ngIf="
               feedbackForm.get('author').hasError('required') &&
               feedbackForm.get('author').touched
-            "
-            >Author name is required</mat-error
-          >
+            ">Author name is required</mat-error>
         </mat-form-field>
       </p>
       <p>
-        <mat-slider
-          thumbLabel
-          [displayWith]
-          formControlName="rating"
-          min="1"
-          max="5"
-        ></mat-slider>
+        <mat-slider thumbLabel [displayWith] formControlName="rating" min="1" max="5"></mat-slider>
       </p>
       <p>
         <mat-form-field class="full-width">
-          <textarea
-            matInput
-            formControlName="comment"
-            placeholder="Your Feedback"
-            rows="12"
-          ></textarea>
-          <mat-error
-            *ngIf="
+          <textarea matInput formControlName="comment" placeholder="Your Feedback" rows="12"></textarea>
+          <mat-error *ngIf="
               feedbackForm.get('comment').hasError('required') &&
               feedbackForm.get('comment').touched
-            "
-            >Your comment is required</mat-error
-          >
+            ">Your comment is required</mat-error>
         </mat-form-field>
       </p>
-      <button
-        type="submit"
-        mat-button
-        class="background-primary text-floral-white"
-        [disabled]="feedbackForm.invalid"
-      >
+      <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid">
         Submit
       </button>
     </form>

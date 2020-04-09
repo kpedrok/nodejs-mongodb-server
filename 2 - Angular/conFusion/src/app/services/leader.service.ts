@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { LEADERS } from '../shared/leaders';
-import { Leader } from '../shared/leader';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { Leader } from '../shared/leader';
+import { LEADERS } from '../shared/leaders';
 
 @Injectable({
   providedIn: 'root'
