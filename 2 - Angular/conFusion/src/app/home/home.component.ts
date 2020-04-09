@@ -1,10 +1,10 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { DishService } from '../services/dish.service';
-import { LeaderService } from '../services/leader.service';
-import { PromotionService } from '../services/promotion.service';
-import { Dish } from '../shared/dish';
-import { Leader } from '../shared/leader';
-import { Promotion } from '../shared/promotion';
+import { Component, Inject, OnInit } from '@angular/core'
+import { DishService } from '../services/dish.service'
+import { LeaderService } from '../services/leader.service'
+import { PromotionService } from '../services/promotion.service'
+import { Dish } from '../shared/dish'
+import { Leader } from '../shared/leader'
+import { Promotion } from '../shared/promotion'
 
 @Component({
   selector: 'app-home',
@@ -12,9 +12,10 @@ import { Promotion } from '../shared/promotion';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  dish: Dish;
-  promotion: Promotion;
-  leader: Leader;
+  dish: Dish
+  promotion: Promotion
+  leader: Leader
+  dishErrMess: string
 
   constructor(
     private dishservice: DishService,
@@ -24,12 +25,8 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.dishservice.getFeaturedDish().subscribe(dish => (this.dish = dish));
-    this.promotionservice
-      .getFeaturedPromotion()
-      .subscribe(promotion => (this.promotion = promotion));
-    this.leaderservice
-      .getFeaturedLeader()
-      .subscribe(leader => (this.leader = leader));
+    this.dishservice.getFeaturedDish().subscribe(dish => this.dish = dish, errmess => this.dishErrMess = <any>errmess)
+    this.promotionservice.getFeaturedPromotion().subscribe(promotion => (this.promotion = promotion))
+    this.leaderservice.getFeaturedLeader().subscribe(leader => (this.leader = leader))
   }
 }
