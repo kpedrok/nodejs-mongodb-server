@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'
 import { catchError, map } from 'rxjs/operators'
@@ -32,6 +32,17 @@ export class DishService {
     return this.getDishes().pipe(
       map((dishes) => dishes.map((dish) => dish.id))
     ).pipe(catchError(this.processHTTPMsgService.handleError))
+  }
+
+  putDish(dish: Dish): Observable<Dish> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    return this.http.put<Dish>(baseURL + 'dishes/' + dish.id, dish, httpOptions)
+      .pipe(catchError(this.processHTTPMsgService.handleError))
+
   }
 
 }
