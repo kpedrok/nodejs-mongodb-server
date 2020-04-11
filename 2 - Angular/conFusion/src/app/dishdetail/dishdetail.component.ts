@@ -1,9 +1,9 @@
-import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Location } from '@angular/common'
 import { Component, Inject, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { ActivatedRoute, Params } from '@angular/router'
 import { switchMap } from 'rxjs/operators'
+import { expand, visibility } from '../animations/animations'
 import { DishService } from '../services/dish.service'
 import { Dish } from '../shared/dish'
 import { ContactType } from '../shared/feedback'
@@ -13,17 +13,8 @@ import { ContactType } from '../shared/feedback'
   templateUrl: './dishdetail.component.html',
   styleUrls: ['./dishdetail.component.scss'],
   animations: [
-    trigger('visibility', [
-      state('shown', style({
-        transform: 'scale(1.0)',
-        opacity: 1
-      })),
-      state('hidden', style({
-        transform: 'scale(0.5)',
-        opacity: 0
-      })),
-      transition('* => *', animate('0.5s ease-in-out'))
-    ])
+    visibility(),
+    expand(),
   ]
 })
 export class DishdetailComponent implements OnInit {
@@ -49,7 +40,6 @@ export class DishdetailComponent implements OnInit {
   feedbackForm: FormGroup
   feedback
   contactType = ContactType
-  visibility = 'shown'
 
   formErrors = {
     author: '',
