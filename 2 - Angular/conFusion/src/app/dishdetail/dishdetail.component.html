@@ -1,5 +1,4 @@
-<div class="container" fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px"
-  fxLayoutGap.xs="0">
+<div class="container" fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px" fxLayoutGap.xs="0">
   <div fxFlex="100">
     <div>
       <h3 *ngIf="dish">{{ dish.name | uppercase }}</h3>
@@ -7,11 +6,11 @@
     </div>
   </div>
 
-  <div fxFlex="40">
-    <mat-card *ngIf="dish">
+  <div fxFlex="40" *ngIf="dish" [@visibility]="visibility">
+    <mat-card>
       <mat-card-header>
         <mat-card-title>
-          <h3 *ngIf="dish">{{ dish.name | uppercase }}</h3>
+          <h3>{{ dish.name | uppercase }}</h3>
         </mat-card-title>
       </mat-card-header>
       <img mat-card-image src="{{ baseURL + dish.image }}" alt="{{ dish.name }}" />
@@ -38,8 +37,8 @@
     </mat-card>
   </div>
 
-  <div fxFlex="40">
-    <mat-list *ngIf="dish">
+  <div fxFlex="40" *ngIf="dish" [@visibility]="visibility">
+    <mat-list>
       <h3>Comments</h3>
       <mat-list-item *ngFor="let comment of dish.comments">
         <p matLine>{{ comment.comment }}</p>
