@@ -29,9 +29,9 @@ export class DishService {
   }
 
   getDishIds(): Observable<number[] | any> {
-    return this.getDishes().pipe(
-      map((dishes) => dishes.map((dish) => dish.id))
-    ).pipe(catchError(this.processHTTPMsgService.handleError))
+    return this.getDishes()
+      .pipe(map((dishes) => dishes.map((dish) => dish.id)))
+      .pipe(catchError(this.processHTTPMsgService.handleError))
   }
 
   putDish(dish: Dish): Observable<Dish> {

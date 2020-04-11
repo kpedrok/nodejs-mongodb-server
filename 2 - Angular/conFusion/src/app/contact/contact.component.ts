@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { expand, flyInOut } from '../animations/animations'
+import { expand, flyInOut, visibility } from '../animations/animations'
+import { FeedbackService } from '../services/feedback.service'
 import { ContactType, Feedback } from '../shared/feedback'
 
 @Component({
@@ -14,7 +15,8 @@ import { ContactType, Feedback } from '../shared/feedback'
   },
   animations: [
     flyInOut(),
-    expand()
+    expand(),
+    visibility()
   ]
 })
 export class ContactComponent implements OnInit {
@@ -23,6 +25,11 @@ export class ContactComponent implements OnInit {
   feedbackForm: FormGroup
   feedback: Feedback
   contactType = ContactType
+  feedbackcopy
+  errMess
+  visibilityForm = 'shown'
+  visibilityLoad = 'hidden'
+  visibilityResponse;
 
   formErrors = {
     firstname: '',
@@ -52,7 +59,9 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private feedbackservice: FeedbackService) {
     this.createForm()
   }
 
@@ -101,6 +110,8 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    this.visibilityForm = 'hidden'
+    this.visibilityLoad = 'shown'
     this.feedback = this.feedbackForm.value
     console.log(this.feedback)
     this.feedbackForm.reset({
@@ -112,6 +123,18 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       message: ''
     })
+    this.feedbackservice.submitFeedback(this.feedback).subscribe(feedback => {
+      this.feedbackcopy = feedback
+      this.visibilityLoad = 'hidden'
+      setTimeout(() => {
+        this.visibilityResponse = 'hidden'
+        this.visibilityForm = 'shown'
+      }, 5000)
+
+      console.log(this.feedbackcopy)
+    },
+      errmess => { this.feedbackcopy = null; this.feedbackcopy = null; this.errMess = <any>errmess })
     this.feedbackFormDirective.resetForm()
   }
+
 }

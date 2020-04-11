@@ -40,6 +40,7 @@ export class DishdetailComponent implements OnInit {
   feedbackForm: FormGroup
   feedback
   contactType = ContactType
+  visibility = 'shown'
 
   formErrors = {
     author: '',
@@ -82,7 +83,7 @@ export class DishdetailComponent implements OnInit {
         '',
         [Validators.required, Validators.minLength(2), Validators.maxLength(25)]
       ],
-      rating: ['', Validators.required],
+      rating: ['5', Validators.required],
       comment: ['', Validators.required]
     })
     this.feedbackForm.valueChanges.subscribe(data => this.onValueChanged(data))
