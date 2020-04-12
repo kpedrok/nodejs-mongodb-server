@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core'
-import { expand, flyInOut } from '../animations/app.animations'
+import { expand, flyInOut } from '../animations/app.animation'
 import { DishService } from '../services/dish.service'
 import { Dish } from '../shared/dish'
 

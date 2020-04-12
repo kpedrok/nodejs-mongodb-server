@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core'
-import { expand, flyInOut } from '../animations/app.animations'
+import { expand, flyInOut } from '../animations/app.animation'
 import { LeaderService } from '../services/leader.service'
 import { Leader } from '../shared/leader'
 

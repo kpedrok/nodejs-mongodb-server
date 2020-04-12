@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { expand, flyInOut, visibility } from '../animations/app.animations'
+import { expand, flyInOut, visibility } from '../animations/app.animation'
 import { FeedbackService } from '../services/feedback.service'
 import { ContactType, Feedback } from '../shared/feedback'
 
