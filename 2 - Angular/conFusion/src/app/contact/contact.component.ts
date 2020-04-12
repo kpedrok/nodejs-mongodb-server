@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { expand, flyInOut, visibility } from '../animations/animations'
+import { expand, flyInOut, visibility } from '../animations/app.animations'
 import { FeedbackService } from '../services/feedback.service'
 import { ContactType, Feedback } from '../shared/feedback'
 
@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
   errMess
   visibilityForm = 'shown'
   visibilityLoad = 'hidden'
-  visibilityResponse;
+  visibilityResponse
 
   formErrors = {
     firstname: '',
