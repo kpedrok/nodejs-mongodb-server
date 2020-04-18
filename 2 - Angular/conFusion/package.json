@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server": "cd ../../json-server && json-server --watch db.json -d 2000"
+    "server": "cd ../json-server && json-server --watch db.json -d 2000"
   },
   "private": true,
   "dependencies": {
