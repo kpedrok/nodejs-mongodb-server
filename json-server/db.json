@@ -1,0 +1,508 @@
+{
+  "dishes": [
+    {
+      "id": "0",
+      "name": "Uthappizza",
+      "image": "images/uthappizza.png",
+      "category": "mains",
+      "featured": true,
+      "label": "Hot",
+      "price": "4.99",
+      "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Imagine all the eatables, living in conFusion!",
+          "author": "John Lemon",
+          "date": "2012-10-16T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "date": "2014-09-05T17:57:28.556094Z"
+        },
+        {
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "date": "2015-02-13T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "date": "2013-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "author": "Teste",
+          "rating": 4,
+          "comment": "fsdfsdfd",
+          "date": "2020-04-09T05:06:42.672Z"
+        },
+        {
+          "author": "teste",
+          "rating": 4,
+          "comment": "rter",
+          "date": "2020-04-11T04:31:45.252Z"
+        },
+        {
+          "author": "efsf",
+          "rating": 2,
+          "comment": "fsdf",
+          "date": "2020-04-11T04:35:05.866Z"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Zucchipakoda",
+      "image": "images/zucchipakoda.png",
+      "category": "appetizer",
+      "featured": false,
+      "label": "",
+      "price": "1.99",
+      "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Imagine all the eatables, living in conFusion!",
+          "author": "John Lemon",
+          "date": "2012-10-16T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "date": "2014-09-05T17:57:28.556094Z"
+        },
+        {
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "date": "2015-02-13T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "date": "2013-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "date": "2011-12-02T17:57:28.556094Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Vadonut",
+      "image": "images/vadonut.png",
+      "category": "appetizer",
+      "featured": false,
+      "label": "New",
+      "price": "1.99",
+      "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Imagine all the eatables, living in conFusion!",
+          "author": "John Lemon",
+          "date": "2012-10-16T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "date": "2014-09-05T17:57:28.556094Z"
+        },
+        {
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "date": "2015-02-13T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "date": "2013-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "date": "2011-12-02T17:57:28.556094Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "ElaiCheese Cake",
+      "image": "images/elaicheesecake.png",
+      "category": "dessert",
+      "featured": false,
+      "label": "",
+      "price": "2.99",
+      "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",
+      "comments": [
+        {
+          "rating": 5,
+          "comment": "Imagine all the eatables, living in conFusion!",
+          "author": "John Lemon",
+          "date": "2012-10-16T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+          "author": "Paul McVites",
+          "date": "2014-09-05T17:57:28.556094Z"
+        },
+        {
+          "rating": 3,
+          "comment": "Eat it, just eat it!",
+          "author": "Michael Jaikishan",
+          "date": "2015-02-13T17:57:28.556094Z"
+        },
+        {
+          "rating": 4,
+          "comment": "Ultimate, Reaching for the stars!",
+          "author": "Ringo Starry",
+          "date": "2013-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 2,
+          "comment": "It's your birthday, we're gonna party!",
+          "author": "25 Cent",
+          "date": "2011-12-02T17:57:28.556094Z"
+        }
+      ]
+    }
+  ],
+  "promotions": [
+    {
+      "id": "0",
+      "name": "Weekend Grand Buffet",
+      "image": "images/buffet.png",
+      "featured": true,
+      "label": "New",
+      "price": "19.99",
+      "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person "
+    }
+  ],
+  "leadership": [
+    {
+      "id": "0",
+      "name": "Peter Pan",
+      "image": "images/alberto.png",
+      "designation": "Chief Epicurious Officer",
+      "featured": false,
+      "abbr": "CEO",
+      "description": "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections."
+    },
+    {
+      "id": "1",
+      "name": "Dhanasekaran Witherspoon",
+      "image": "images/alberto.png",
+      "designation": "Chief Food Officer",
+      "featured": false,
+      "abbr": "CFO",
+      "description": "Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!"
+    },
+    {
+      "id": "2",
+      "name": "Agumbe Tang",
+      "image": "images/alberto.png",
+      "designation": "Chief Taste Officer",
+      "featured": false,
+      "abbr": "CTO",
+      "description": "Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick."
+    },
+    {
+      "id": "3",
+      "name": "Alberto Somayya",
+      "image": "images/alberto.png",
+      "designation": "Executive Chef",
+      "featured": true,
+      "abbr": "EC",
+      "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "0cce4b4e-5645-4c3d-af59-1a481e5da37e",
+      "memberId": "6cd4fc4b-6384-407c-a9db-71490268fbe0",
+      "note": "f852note",
+      "authorName": "f852authorName",
+      "authorId": "f852authorId"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "342",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "qeqweqe",
+      "id": "LV1KwaO"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "qeqweqw",
+      "id": "GRKMnV_"
+    },
+    {
+      "firstname": "ewqe",
+      "lastname": "qweq",
+      "telnum": "3242",
+      "email": "qweqsdf!@FIJOHI",
+      "agree": false,
+      "contacttype": "None",
+      "message": "DSFSDFSD",
+      "id": "4VGN42a"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "dfwfwe",
+      "id": "-iTzpTY"
+    },
+    {
+      "firstname": "dasds",
+      "lastname": "sadas",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "qw",
+      "id": "6OD4gqG"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "saasd",
+      "id": "APcEc5_"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "asdasd",
+      "id": "Yi_Uoam"
+    },
+    {
+      "firstname": "Tamara",
+      "lastname": "Kondak",
+      "telnum": "995490",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "df",
+      "id": "Prg1HV4"
+    },
+    {
+      "firstname": "fsdfsd",
+      "lastname": "ssdfsdf",
+      "telnum": "42334",
+      "email": "pedro@re",
+      "agree": false,
+      "contacttype": "None",
+      "message": "sdfs",
+      "id": "fl6GoXK"
+    },
+    {
+      "firstname": "eqweqwe",
+      "lastname": "BOAS",
+      "telnum": "2341",
+      "email": "kofsijd@eoreij",
+      "agree": false,
+      "contacttype": "None",
+      "message": "dedfww",
+      "id": "mEt4pY1"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": "TV640f4"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "3424",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "asdd",
+      "id": "CMTC-De"
+    },
+    {
+      "firstname": "dfasdf",
+      "lastname": "fasdfas",
+      "telnum": "342",
+      "email": "kofgjdn@ekprjiofg",
+      "agree": false,
+      "contacttype": "None",
+      "message": "sdfadsf",
+      "id": "3OVw4l_"
+    },
+    {
+      "firstname": "fdsfsdf",
+      "lastname": "sdfsdf",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "sdfdsfs",
+      "id": "W1Ly6XP"
+    },
+    {
+      "firstname": "epwjiorwhu",
+      "lastname": "dsgfjdigh",
+      "telnum": "2123",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": "huhkUoo"
+    },
+    {
+      "firstname": "32rr",
+      "lastname": "BOAS",
+      "telnum": "342",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "rfew",
+      "id": "zfmq6cm"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "asdas",
+      "id": "RHBAzKO"
+    },
+    {
+      "firstname": "adsfj",
+      "lastname": "sdfjlgd",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "sadfasdf",
+      "id": "150HLHD"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": "FoMywmA"
+    },
+    {
+      "firstname": "PEDRO KONDAK",
+      "lastname": "BOAS",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "qwdw",
+      "id": "nvlbNoK"
+    },
+    {
+      "firstname": "sdsad",
+      "lastname": "asda",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "asdas",
+      "id": "Jkzds-k"
+    },
+    {
+      "firstname": "iwjoeurieghf",
+      "lastname": "BOAS",
+      "telnum": "342",
+      "email": "difjd@erfjido",
+      "agree": false,
+      "contacttype": "None",
+      "message": "fdfsdf",
+      "id": "KKoTDZG"
+    },
+    {
+      "firstname": "ewrwer",
+      "lastname": "werwer",
+      "telnum": "108697",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "erwrwe",
+      "id": "nY0pTyg"
+    },
+    {
+      "firstname": "apoksrijw",
+      "lastname": "fwkrgfjnd",
+      "telnum": "23425",
+      "email": "difjd@erfjido",
+      "agree": false,
+      "contacttype": "None",
+      "message": "ewrer",
+      "id": "ZJ6SDU3"
+    },
+    {
+      "firstname": "pedro",
+      "lastname": "boas",
+      "telnum": "543534",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "adsfsad",
+      "id": "fKQqRmx"
+    },
+    {
+      "firstname": "dfdsf",
+      "lastname": "asdfasd",
+      "telnum": "32453",
+      "email": "epjifoigh@432",
+      "agree": false,
+      "contacttype": "None",
+      "message": "drewr",
+      "id": "lrfl8fz"
+    }
+  ]
+}
