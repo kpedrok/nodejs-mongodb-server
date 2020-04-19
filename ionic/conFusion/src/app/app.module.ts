@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
+import { DishdetailPage } from '../pages/dishdetail/dishdetail';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { MenuPage } from '../pages/menu/menu';
@@ -23,7 +24,8 @@ import { MyApp } from './app.component';
     ListPage,
     AboutPage,
     MenuPage,
-    ContactPage
+    ContactPage,
+    DishdetailPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { MyApp } from './app.component';
     ListPage,
     AboutPage,
     MenuPage,
-    ContactPage
+    ContactPage,
+    DishdetailPage
   ],
   providers: [
     StatusBar,
