@@ -30,8 +30,8 @@
 
       <ion-list *ngIf="leaders">
         <ion-item *ngFor="let leader of leaders">
-          <ion-avatar slot="start">
-            {{BaseURL + leader.image }}
+          <ion-avatar item-start>
+            <img src="{{BaseURL + leader.image }}">
           </ion-avatar>
           <ion-label>
             <h2>{{leader.name}} {{leader.abbr}}</h2>
