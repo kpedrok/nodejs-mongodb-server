@@ -16,6 +16,7 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
 import { PromotionProvider } from '../providers/promotion/promotion';
 import { baseURL } from '../shared/baseurl';
 import { MyApp } from './app.component';
+import { FavoriteProvider } from '../providers/favorite/favorite';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { MyApp } from './app.component';
     LeaderProvider,
     PromotionProvider,
     ProcessHttpmsgProvider,
-    { provide: 'BaseURL', useValue: baseURL }
+    { provide: 'BaseURL', useValue: baseURL },
+    FavoriteProvider
   ]
 })
 export class AppModule { }
