@@ -18,6 +18,7 @@ import { baseURL } from "../shared/baseurl";
 import { MyApp } from "./app.component";
 import { FavoriteProvider } from "../providers/favorite/favorite";
 import { FavoritesPage } from "../pages/favorites/favorites";
+import { ReservationPage } from "../pages/reservation/reservation";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FavoritesPage } from "../pages/favorites/favorites";
     ContactPage,
     DishdetailPage,
     FavoritesPage,
+    ReservationPage,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp), HttpClientModule],
   bootstrap: [IonicApp],
@@ -41,6 +43,7 @@ import { FavoritesPage } from "../pages/favorites/favorites";
     ContactPage,
     DishdetailPage,
     FavoritesPage,
+    ReservationPage,
   ],
   providers: [
     StatusBar,

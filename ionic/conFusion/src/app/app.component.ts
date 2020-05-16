@@ -1,12 +1,13 @@
 import { Component, ViewChild } from "@angular/core";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { StatusBar } from "@ionic-native/status-bar";
-import { Nav, Platform } from "ionic-angular";
+import { Nav, Platform, ModalController } from "ionic-angular";
 import { AboutPage } from "../pages/about/about";
 import { ContactPage } from "../pages/contact/contact";
 import { HomePage } from "../pages/home/home";
 import { MenuPage } from "../pages/menu/menu";
 import { FavoritesPage } from "../pages/favorites/favorites";
+import { ReservationPage } from "../pages/reservation/reservation";
 
 @Component({
   templateUrl: "app.html",
@@ -21,7 +22,8 @@ export class MyApp {
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    public modalCtrl: ModalController
   ) {
     this.initializeApp();
 
@@ -48,5 +50,10 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  openReserve() {
+    let modal = this.modalCtrl.create(ReservationPage);
+    modal.present();
   }
 }
