@@ -1,22 +1,23 @@
-import { HttpClientModule } from '@angular/common/http';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { DishdetailPage } from '../pages/dishdetail/dishdetail';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { MenuPage } from '../pages/menu/menu';
-import { DishProvider } from '../providers/dish/dish';
-import { LeaderProvider } from '../providers/leader/leader';
-import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
-import { PromotionProvider } from '../providers/promotion/promotion';
-import { baseURL } from '../shared/baseurl';
-import { MyApp } from './app.component';
-import { FavoriteProvider } from '../providers/favorite/favorite';
+import { HttpClientModule } from "@angular/common/http";
+import { ErrorHandler, NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { SplashScreen } from "@ionic-native/splash-screen";
+import { StatusBar } from "@ionic-native/status-bar";
+import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
+import { AboutPage } from "../pages/about/about";
+import { ContactPage } from "../pages/contact/contact";
+import { DishdetailPage } from "../pages/dishdetail/dishdetail";
+import { HomePage } from "../pages/home/home";
+import { ListPage } from "../pages/list/list";
+import { MenuPage } from "../pages/menu/menu";
+import { DishProvider } from "../providers/dish/dish";
+import { LeaderProvider } from "../providers/leader/leader";
+import { ProcessHttpmsgProvider } from "../providers/process-httpmsg/process-httpmsg";
+import { PromotionProvider } from "../providers/promotion/promotion";
+import { baseURL } from "../shared/baseurl";
+import { MyApp } from "./app.component";
+import { FavoriteProvider } from "../providers/favorite/favorite";
+import { FavoritesPage } from "../pages/favorites/favorites";
 
 @NgModule({
   declarations: [
@@ -26,13 +27,10 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     AboutPage,
     MenuPage,
     ContactPage,
-    DishdetailPage
+    DishdetailPage,
+    FavoritesPage,
   ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-    HttpClientModule,
-  ],
+  imports: [BrowserModule, IonicModule.forRoot(MyApp), HttpClientModule],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -41,7 +39,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     AboutPage,
     MenuPage,
     ContactPage,
-    DishdetailPage
+    DishdetailPage,
+    FavoritesPage,
   ],
   providers: [
     StatusBar,
@@ -51,8 +50,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     LeaderProvider,
     PromotionProvider,
     ProcessHttpmsgProvider,
-    { provide: 'BaseURL', useValue: baseURL },
-    FavoriteProvider
-  ]
+    { provide: "BaseURL", useValue: baseURL },
+    FavoriteProvider,
+  ],
 })
-export class AppModule { }
+export class AppModule {}

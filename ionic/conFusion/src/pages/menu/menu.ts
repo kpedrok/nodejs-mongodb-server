@@ -1,8 +1,9 @@
-import { Component, Inject } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DishProvider } from '../../providers/dish/dish';
-import { Dish } from '../../shared/dish';
-import { DishdetailPage } from '../dishdetail/dishdetail';
+import { Component, Inject } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { DishProvider } from "../../providers/dish/dish";
+import { Dish } from "../../shared/dish";
+import { DishdetailPage } from "../dishdetail/dishdetail";
+import { FavoriteProvider } from "../../providers/favorite/favorite";
 
 /**
  * Generated class for the MenuPage page.
@@ -13,8 +14,8 @@ import { DishdetailPage } from '../dishdetail/dishdetail';
 
 @IonicPage()
 @Component({
-  selector: 'page-menu',
-  templateUrl: 'menu.html',
+  selector: "page-menu",
+  templateUrl: "menu.html",
 })
 export class MenuPage {
   dishes: Dish[];
@@ -24,24 +25,30 @@ export class MenuPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private dishservice: DishProvider,
-    @Inject('BaseURL') private BaseURL) {
-  }
+    @Inject("BaseURL") private BaseURL,
+    private favoriteservice: FavoriteProvider
+  ) {}
 
   ngOnInit() {
-    this.dishservice.getDishes()
-      .subscribe(dishes => this.dishes = dishes,
-        errmess => this.errMess = <any>errmess);
+    this.dishservice.getDishes().subscribe(
+      (dishes) => (this.dishes = dishes),
+      (errmess) => (this.errMess = <any>errmess)
+    );
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MenuPage');
+    console.log("ionViewDidLoad MenuPage");
   }
 
   dishSelected(event, dish) {
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(DishdetailPage, {
-      dish: dish
+      dish: dish,
     });
   }
 
+  addToFavorites(dish: Dish) {
+    console.log("Adding to Favorites", dish.id);
+    this.favoriteservice.addFavorite(dish.id);
+  }
 }
