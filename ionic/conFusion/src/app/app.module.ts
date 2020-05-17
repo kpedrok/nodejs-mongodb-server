@@ -19,6 +19,7 @@ import { MyApp } from "./app.component";
 import { FavoriteProvider } from "../providers/favorite/favorite";
 import { FavoritesPage } from "../pages/favorites/favorites";
 import { ReservationPage } from "../pages/reservation/reservation";
+import { CommentPage } from "../pages/comment/comment";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ReservationPage } from "../pages/reservation/reservation";
     DishdetailPage,
     FavoritesPage,
     ReservationPage,
+    CommentPage,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp), HttpClientModule],
   bootstrap: [IonicApp],
@@ -44,6 +46,7 @@ import { ReservationPage } from "../pages/reservation/reservation";
     DishdetailPage,
     FavoritesPage,
     ReservationPage,
+    CommentPage,
   ],
   providers: [
     StatusBar,
@@ -57,4 +60,4 @@ import { ReservationPage } from "../pages/reservation/reservation";
     FavoriteProvider,
   ],
 })
-export class AppModule {}
+export class AppModule { }

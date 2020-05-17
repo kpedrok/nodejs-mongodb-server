@@ -1,7 +1,8 @@
 import { Component, Inject } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, ActionSheetController, ModalController } from 'ionic-angular';
 import { FavoriteProvider } from '../../providers/favorite/favorite';
 import { Dish } from '../../shared/dish';
+import { CommentPage } from '../comment/comment';
 
 /**
  * Generated class for the DishdetailPage page.
@@ -27,7 +28,10 @@ export class DishdetailPage {
     public navParams: NavParams,
     @Inject('BaseURL') private BaseURL,
     private favoriteservice: FavoriteProvider,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    public actionSheetCtrl: ActionSheetController,
+    public modalCtrl: ModalController
+
   ) {
     this.dish = navParams.get('dish');
     this.favorite = favoriteservice.isFavorite(this.dish.id);
@@ -50,5 +54,51 @@ export class DishdetailPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DishdetailPage');
   }
+
+  presentActionSheet() {
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'Select Actions',
+      buttons: [
+        {
+          text: 'Add to Favorites',
+          role: 'addToFavorites()',
+          handler: () => {
+            console.log('Add to Favorite');
+            this.addToFavorites()
+          }
+        }, {
+          text: 'Add Comments',
+          handler: () => {
+            console.log('Add Comments');
+            this.openComment()
+          }
+        }, {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
+
+
+  async openComment() {
+    let modal = this.modalCtrl.create(CommentPage);
+    modal.present();
+
+    modal.onDidDismiss(data => {
+      var dateobj = new Date();
+      data.date = dateobj.toISOString()
+      this.dish.comments.push(data)
+    });
+  }
+
+
+
+
+
 
 }
