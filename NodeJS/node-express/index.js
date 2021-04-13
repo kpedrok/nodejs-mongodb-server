@@ -2,6 +2,8 @@ const express = require("express"),
   http = require("http");
 const morgan = require("morgan");
 const dishRouter = require("./routes/dishRouter");
+const leaderRouter = require("./routes/leaderRouter");
+const promotionRouter = require("./routes/promoRouter");
 
 const app = express();
 app.use(morgan("dev"));
@@ -10,6 +12,8 @@ app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded()); //Parse URL-encoded bodies
 
 app.use("/dishes", dishRouter);
+app.use("/promotions", promotionRouter);
+app.use("/leaders", leaderRouter);
 
 app.use((req, res, next) => {
   console.log(req.headers);
