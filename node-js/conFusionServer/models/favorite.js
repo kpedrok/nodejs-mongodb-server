@@ -14,7 +14,6 @@ var favoriteSchema = new Schema({
   {
     timestamps: true
   }
-
 );
 
 var Favorites = mongoose.model('Favorite', favoriteSchema);
