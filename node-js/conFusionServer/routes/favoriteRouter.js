@@ -29,7 +29,7 @@ favoriteRouter.route('/')
     Favorites.findOne({ user: req.user._id })
       .then((favorite) => {
         if (favorite) {
-          for (let i of req.body.length) {
+          for (var i = 0; i < req.body.length; i++) {
             if (favorite.dishes.indexOf(req.body[i]._id) === -1) {
               favorite.dishes.push(req.body[i]._id);
             }
